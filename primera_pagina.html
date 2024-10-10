@@ -10,7 +10,7 @@
 <!--Recordau que els atributs bgcolor no són recomanables,
 és millor fer servir CSS, però encara no l'hem vist-->
 <body bgcolor="Lavender">
-    <header>
+    <header id="cabecera">
         <h1>Benvinguts a la meva web!!!!</h1>
 
         <h2>
@@ -18,17 +18,35 @@
         </h2>
     </header>
 
+    <hr>
+
     <main>
         <div>
-            <p>
-                Aquesta és la primera pàgina HTML que fem al curs de Llenguatges de Marques, 2024/25.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim qui magnam recusandae at? Dicta sequi nobis ad vero non, porro quas inventore quidem possimus, at esse rerum ipsam eum vitae.
-                Dignissimos reiciendis, eum expedita facere alias doloremque illo a, vero id quisquam aut adipisci molestias quam veritatis quidem sapiente modi quos excepturi impedit asperiores suscipit ad ratione ipsa nemo. Consequatur.
-                Nisi, at amet expedita nulla laudantium facilis laboriosam voluptate ex maiores adipisci quo similique quasi, perspiciatis fugiat? Repudiandae dignissimos voluptates molestiae? Voluptatibus enim nulla eaque odio tempora nostrum eius sit!
-                Eveniet voluptas consequatur provident sequi autem recusandae laboriosam fugiat aliquam blanditiis in cum dicta qui iusto maxime eligendi iste, nemo voluptate, ut eum laborum porro dolore consequuntur tenetur fugit. Atque!
-            </p>
+            <pre>
+                Aquesta    és la primera pàgina HTML 
+                
+                
+                que fem al curs de      Llenguatges de Marques, 2024/25.
+            </pre>
+
+            <details>
+                <summary><strong>Lorem Impsum</strong></summary>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim qui magnam recusandae at? Dicta sequi nobis ad vero non, porro quas inventore quidem possimus, at esse rerum ipsam eum vitae.
+                    Dignissimos reiciendis, eum expedita facere alias doloremque illo a, vero id quisquam aut adipisci molestias quam veritatis quidem sapiente modi quos excepturi impedit asperiores suscipit ad ratione ipsa nemo. Consequatur.
+                    Nisi, at amet expedita nulla laudantium facilis laboriosam voluptate ex maiores adipisci quo similique quasi, perspiciatis fugiat? Repudiandae dignissimos voluptates molestiae? Voluptatibus enim nulla eaque odio tempora nostrum eius sit!
+                    Eveniet voluptas consequatur provident sequi autem recusandae laboriosam fugiat aliquam blanditiis in cum dicta qui iusto maxime eligendi iste, nemo voluptate, ut eum laborum porro dolore consequuntur tenetur fugit. Atque!
+                </p>
+            </details>
+
+            <div>
+                <label>Hola</label>
+                <span>
+                    Adios
+                </span>
+            </div>
+
+            
         </div>
 
         <div>
@@ -93,9 +111,11 @@
 
     <footer>
         <address>C\Cabana, 31</address>
-
         <div>
-            <a href="./index.html">&#8592; tornar</a>
+            <a href="#cabecera">&#8593; torna adalt</a>
+        </div>
+        <div>
+            <a href="./index.html">&#8592; torna a l'índex</a>
         </div>
     </footer>
 </body>
