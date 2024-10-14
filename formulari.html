@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari</title>
+</head>
+<body bgcolor="LightCoral">
+
+    <header>
+        <h1>El meu formulari</h1>
+    </header>
+
+    <main>
+        <form action="index.html" method="get">
+
+            <div>
+                <label for="nom">Nom:</label>
+                <input type="text" name="nom" id="nom" maxlength="10"
+                        placeholder="El teu nom"
+                        required size="25" autocomplete="on">
+
+                <label for="llinatges">Llinatges:</label>
+                <input type="text" name="llinatges" id="llinatges"
+                        placeholder="Els teus llinatges" maxlength="20"
+                        title="Màxim 20 caràcters" autocomplete="on">
+            </div>
+            <div>
+                <label for="edad">Edat:</label>
+                <input type="number" name="edad" id="edad" min="18" max="120">
+                <label for="datanaix">Data de naixement:</label>
+                <input type="date" name="datanaix" id="datanaix" max="2024-12-31" min="1900-01-01">
+            </div>
+
+            <div>
+                <span>Interesos:</span>
+                <div>
+                    <input type="checkbox" name="interes1" id="interes1" value="y">
+                    <label for="interes1">Fútbol</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="interes2" id="interes2" value="y">
+                    <label for="interes2">Bàsket</label>
+                </div>
+                
+                <div>
+                    <input type="checkbox" name="interes3" id="interes3" value="y">
+                    <label for="interes3">Videojocs</label>
+                </div>
+            </div>
+            <div>
+                <span>Pais naixement:</span>
+                <div>
+                    <input type="radio" name="paisnaix" id="pais1" value="ES">
+                    <label for="pais1">Espanya</label>
+                </div>
+                <div>
+                    <input type="radio" name="paisnaix" id="pais2" value="IT">
+                    <label for="pais2">Italia</label>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <label for="provincia">Provincia: </label>
+                    <select name="provincia" id="provincia" required>
+                        <option value="">Tria una opció</option>
+                        <option value="08">Barcelona</option>
+                        <option value="07">Illes Balears</option>
+                        <option value="28">Madrid</option>
+                    </select>
+                </div>
+            </div>
+
+            <input type="range" name="" id="" min="600000000" max="699999999" >
+
+            <div>
+                <label for="observacions">Observacions:</label>
+                <br>
+                <textarea name="observacions" id="observacions" cols="50" rows="10"></textarea>
+            </div>
+
+            <div>
+                <input type="submit" value="Envia">
+                <input type="reset" value="Neteja">
+                <input type="button" value="Lanzar caramelos">
+            </div>
+
+        </form>
+        
+
+    </main>
+    
+</body>
+</html>
