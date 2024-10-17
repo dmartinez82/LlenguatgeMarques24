@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulari</title>
 </head>
+
 <body bgcolor="LightCoral">
 
     <header>
@@ -15,15 +17,20 @@
         <form action="index.html" method="get">
 
             <div>
-                <label for="nom">Nom:</label>
-                <input type="text" name="nom" id="nom" maxlength="10"
-                        placeholder="El teu nom"
-                        required size="25" autocomplete="on">
 
-                <label for="llinatges">Llinatges:</label>
-                <input type="text" name="llinatges" id="llinatges"
-                        placeholder="Els teus llinatges" maxlength="20"
+                <input type="text" name="nom" id="nom" maxlength="10" placeholder="El teu nom" required size="25"
+                    autocomplete="on">
+                <br>
+                <label for="nom"><small>Nom</small></label>
+                
+                <br>
+                <p>
+                    <label for="llinatges">Llinatges:</label>
+                    <input type="text" name="llinatges" id="llinatges" placeholder="Els teus llinatges" maxlength="20"
                         title="Màxim 20 caràcters" autocomplete="on">
+                </p>
+
+               
             </div>
             <div>
                 <label for="edad">Edat:</label>
@@ -43,7 +50,7 @@
                     <input type="checkbox" name="interes2" id="interes2" value="y">
                     <label for="interes2">Bàsket</label>
                 </div>
-                
+
                 <div>
                     <input type="checkbox" name="interes3" id="interes3" value="y">
                     <label for="interes3">Videojocs</label>
@@ -69,11 +76,24 @@
                         <option value="08">Barcelona</option>
                         <option value="07">Illes Balears</option>
                         <option value="28">Madrid</option>
+                        <optgroup label="Ciutats autònomes">
+                            <option value="98">Ceuta</option>
+                            <option value="99">Melilla</option>
+                        </optgroup>
+
                     </select>
                 </div>
             </div>
 
-            <input type="range" name="" id="" min="600000000" max="699999999" >
+            <div>
+                <label>Telèfon</label>
+                <select name="prefix" id="prefix">
+                    <option value="">Selecciona</option>
+                    <option value="34">+34 (Spain)</option>
+                    <option value="35">+35 (Chiquitistan)</option>
+                </select>
+                <input type="tel" name="telefon" id="telefon">
+            </div>
 
             <div>
                 <label for="observacions">Observacions:</label>
@@ -91,6 +111,7 @@
         
 
     </main>
-    
+
 </body>
+
 </html>
