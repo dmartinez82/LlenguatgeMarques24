@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+}
+
+ol{
+    list-style-type: none;
+}

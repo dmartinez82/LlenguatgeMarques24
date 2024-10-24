@@ -1,0 +1,69 @@
+body{
+    background-image: url("../img/beach.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+img{
+    filter: blur(5px);
+}
+
+img:hover{
+    filter: none;
+}
+
+table{
+    background-color: LightGrey;
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+
+th, td{
+    border: 1px solid black;
+}
+
+thead th{
+    background-color: mediumvioletred;
+}
+
+/*tr's imparells del tbody*/
+tbody tr:nth-child(odd){
+    background-color:  white;
+}
+
+.daniVerde{
+    color: green;
+}
+
+td[colspan]{
+    font-style: italic;
+}
+
+#tigreton{
+    display: inline-block;
+}
+
+#tigreton:hover{
+    animation-duration: 0.4s;
+    animation-name: rotacion;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes rotacion {
+    0% {
+        transform: rotate(40deg);
+    }
+  
+    100%{
+        transform: rotate(-40deg);
+    }
+  }
+
+h1{
+    border: 1px solid black;
+    padding: 25px;
+    margin: 0 auto;
+    width: 50%;
+}

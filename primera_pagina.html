@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primera pàgina</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/primera.css">
 </head>
 
 <!--Recordau que els atributs bgcolor no són recomanables,
 és millor fer servir CSS, però encara no l'hem vist-->
-<body bgcolor="Lavender">
+<body>
     <header id="cabecera">
         <h1>Benvinguts a la meva web!!!!</h1>
 
@@ -62,7 +63,7 @@
         <br> <!--No es recomana, però encara no hem vist CSS-->
 
         <div id="llista">
-            <ol> <!-- ordered list-->
+            <ol id="orderedList"> <!-- ordered list-->
                 <li>
                     <a href="https://www.laprensa.hn/binrepository/1020x651/0c36/1020d580/none/11004/DNGK/tomaterico_LP884287_MG80099065.jpg" target="_blank">
                         Tomàtiga
@@ -81,27 +82,32 @@
         </div>
 
         <div id="taules">
-            <table border="1" cellspacing="15" cellpadding="15" bgcolor="LightGrey">
+            <table>
                 <thead>
                     <tr>
-                        <th colspan="4" bgcolor="MediumVioletRed">Alumnes</th>
+                        <th colspan="4">Alumnes</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr> <!--table row-->
-                        <td bgcolor="LightGreen">Dani</td>
+                        <td class="daniVerde">Dani</td>
                         <td>Jaume</td>
                         <td>Oscar</td>
                         <td>Manchón</td>
                     </tr>
                     <tr>
                         <td colspan="2">Violeta</td>
-                        <td colspan="2">Dani Sastre</td>
+                        <td colspan="2" class="daniVerde">Dani Sastre</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Marc Blanco</td>
+                        <td>Pedro</td>
+                        <td>Marc</td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="4">&copy;Es Liceu &#128047;</td>
+                        <th colspan="4">&copy;Es Liceu <span id="tigreton">&#128047;</span></th>
                         <!--Esto es un comentario-->
                     </tr>
                 </tfoot>
