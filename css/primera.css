@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+
+
 body{
     background-image: url("../img/beach.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: "DynaPuff", system-ui;
 }
 
 img{
@@ -66,4 +70,28 @@ h1{
     padding: 25px;
     margin: 0 auto;
     width: 50%;
+}
+
+
+#manolito{
+    bordercolor: green;
+}
+
+
+#cabecera2{
+    border: 5px solid rgba(198, 97, 97, 0.58);
+}
+
+#spanAdios{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+
+.mitad{
+    box-sizing: border-box;
+    width: 35vw;
+    height: 10vh;
+    padding: 15px;
+    margin: 30px;
 }
