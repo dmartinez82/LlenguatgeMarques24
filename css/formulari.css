@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Comentario */
+#banner{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left:0;
+}
+
+header{
+    width: 50%;
+    text-align: center;
+    margin: 10px auto;
+}
+
+main{
+    margin: 20px;
+}
+
+.divFlotante{
+    width: 30%;
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+
+.vermell{
+    color: red;
+}
+
+.altura{
+    height: 15vh;
+    min-height: 30px;
+    max-height: 60px;
+}
+
+.navegacion{
+    background-color: aquamarine;
+}
+
+div.navegacion img{
+    float: left;
+}
+
+div.navegacion nav{
+    width: 30%;
+    float: right;
+}
+
+nav a{
+    display: inline-block;
+    padding-top: min(15px, 7vh);
+}

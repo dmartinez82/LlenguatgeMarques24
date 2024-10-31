@@ -5,11 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulari</title>
+    <!--Hojas de estilo-->
+    <link rel="stylesheet" href="./css/formulari.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 </head>
 
 <body bgcolor="LightCoral">
 
+    <div class="navegacion altura">
+        <img src="./img/favicon.png" alt="xxx" class="altura">
+        <nav class="altura">
+            <a href="./index.html">Index</a>
+            <a href="./primera_pagina.html">Primera Pagina</a>
+        </nav>
+    </div>
+
     <header>
+        <img id="banner" src="./img/banner_flor.jpg" alt="no se ha podido cargar la foto" title="una flor">
         <h1>El meu formulari</h1>
     </header>
 
@@ -39,7 +51,7 @@
                 <input type="date" name="datanaix" id="datanaix" max="2024-12-31" min="1900-01-01">
             </div>
 
-            <div>
+            <div id="divInteresos" class="divFlotante vermell">
                 <span>Interesos:</span>
                 <div>
                     <input type="checkbox" name="interes1" id="interes1" value="y">
@@ -56,7 +68,7 @@
                     <label for="interes3">Videojocs</label>
                 </div>
             </div>
-            <div>
+            <div id="divPais" class="divFlotante">
                 <span>Pais naixement:</span>
                 <div>
                     <input type="radio" name="paisnaix" id="pais1" value="ES">
@@ -68,7 +80,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="clear">
                 <div>
                     <label for="provincia">Provincia: </label>
                     <select name="provincia" id="provincia" required>
