@@ -1,3 +1,8 @@
+:root{
+    --colorFondo: rgb(184, 185, 163);
+    --tipicoBorde: 1px solid black;
+}
+
 a{
     text-decoration: none;
     color: black;
@@ -8,14 +13,23 @@ nav a{
     width: 15%;
     line-height: 10vh;
     text-align: center;
+
+    font-size: larger;
+    font-weight: bolder;
+
+    transition: color 2s, background-color 1s, border 1s;
+    border: 1px solid black;
 }
 
 nav a:hover{
     background-color: blue;
+    color: yellow;
+    border: 3px dotted black;
+
 }
 
 nav{
-    background-color: aquamarine;
+    background-color: var(--colorFondo);
     height: 10vh;
 
     display: flex;
@@ -40,7 +54,8 @@ div.contenedor{
 div.contenedor p{
     width: 40%;
     text-align: justify;
-    border: 1px solid black;
+    border: var(--tipicoBorde);
+    background-color: var(--colorFondo);
 }
 
 main{
