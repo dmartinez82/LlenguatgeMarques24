@@ -40,10 +40,6 @@ main{
     max-height: 60px;
 }
 
-.navegacion{
-    background-color: aquamarine;
-}
-
 div.navegacion img{
     float: left;
 }
@@ -53,7 +49,14 @@ div.navegacion nav{
     float: right;
 }
 
+.navegacion{
+    background-image: linear-gradient(15deg, transparent, aquamarine);
+    height: 45px;
+}
+
 nav a{
-    display: inline-block;
+    display: block;
     padding-top: min(15px, 7vh);
+    float: left;
+    width: 40%;
 }
