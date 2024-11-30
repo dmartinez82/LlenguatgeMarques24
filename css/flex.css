@@ -1,5 +1,5 @@
 :root{
-    --colorFondo: rgb(184, 185, 163);
+    --colorFondo: rgb(171, 177, 55);
     --tipicoBorde: 1px solid black;
 }
 
@@ -9,14 +9,14 @@ a{
 }
 
 nav a{
-    display: block;
-    width: 15%;
-    line-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 10vh;
     text-align: center;
-
-    font-size: larger;
+    font-size: min(max(3vw, 14px), 25px);  
     font-weight: bolder;
-
     transition: color 2s, background-color 1s, border 1s;
     border: 1px solid black;
 }
@@ -25,13 +25,15 @@ nav a:hover{
     background-color: blue;
     color: yellow;
     border: 3px dotted black;
+}
 
+div.contenedor:hover p:first-child{
+    color: blue;
 }
 
 nav{
     background-color: var(--colorFondo);
     height: 10vh;
-
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -39,6 +41,8 @@ nav{
 
 aside{
     background-image: url("../img/banner_publi.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 80vh;
     width: 20vw;
 }
@@ -52,7 +56,7 @@ div.contenedor{
 }
 
 div.contenedor p{
-    width: 40%;
+    flex-basis: 200px;
     text-align: justify;
     border: var(--tipicoBorde);
     background-color: var(--colorFondo);
@@ -61,4 +65,44 @@ div.contenedor p{
 main{
     display: flex;
     flex-direction: row;
+    gap: 10px;
+}
+
+div.contenedor p:nth-of-type(1){
+    flex-grow: 5;
+}
+
+div.contenedor p:nth-of-type(2){
+    flex-grow: 1;
+}
+
+@media (max-width: 800px){
+    aside{
+        display: none;
+    }
+
+    div.contenedor{
+        width: 100vw;
+    }
+}
+
+@media (max-width: 640px){
+    div.contenedor{
+        flex-direction: column;
+    }
+}
+
+@media print {
+    nav{
+        display: none;
+    }
+}
+
+#menu + span{
+    display: none;
+}
+
+#menu:checked + span{
+    display: inline;
+    color:red;
 }
