@@ -2,11 +2,34 @@
 
 
 body{
-    background-image: url("../img/beach.jpg");
+    /*background-image: url("../img/beach.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
     background-attachment: fixed;
     font-family: "DynaPuff", system-ui;
+    /* Gradiente lineal con el primer color repetido al final para una transición suave */
+    background: linear-gradient(45deg, 
+        #ee7752, 
+        #e73c7e, 
+        #23a6d5, 
+        #23d5ab,
+        #ff7e5f,
+        #feb47b,
+        #6a11cb,
+        #2575fc,
+        #ee7752  /* Repetimos el primer color al final */
+    );
+    background-size: 300% 300%;
+    animation: gradientBackground 5s linear infinite;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 img{
@@ -74,7 +97,7 @@ h1{
 
 
 #manolito{
-    bordercolor: green;
+    border-color: green;
 }
 
 
@@ -95,3 +118,38 @@ h1{
     padding: 15px;
     margin: 30px;
 }
+
+.cuadro {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    position: relative;
+    animation-name: moverYColor;
+    animation-direction: alternate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes moverYColor {
+    0% {
+      left: 0;
+      background-color: #3498db;
+    }
+    50% {
+      background-color: #e74c3c;
+    }
+    100% {
+      left: 200px;
+      background-color: #3498db;
+    }
+  }
+
+  @keyframes mover {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(200px);
+    }
+  }
