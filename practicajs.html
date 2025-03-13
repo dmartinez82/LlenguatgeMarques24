@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pràctiques amb JS</title>
+
+    <script src="./js/indexdom.js" defer></script>
+
+    <style>
+        .fondoVerde {
+            background-color: aquamarine;
+        }
+
+        #tablaHistorial, td, tr{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td{
+            width: 40px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>
+        Mi primera página con JavaScript
+    </h1>
+
+    <main>
+        <p>
+            <input type="text" id="nombre" readonly disabled>  
+        </p>
+        <p>
+            <button id="btnClick1">Saludame!</button>
+            <button id="btnClick2">Olvídate de mi!</button>
+        </p>
+        <p>
+            <button id="btnCanviEstil">Cambiemos los estilos!</button>
+        </p>
+
+        <p>
+            <input type="number" name="primero" id="primero" min="0" max="99">
+            <select name="operaciones" id="operaciones">
+                <option value="+">+</option>
+                <option value="-">diff</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="rand">random</option>
+            </select>
+            <input type="number" name="segundo" id="segundo" min="0" max="99">
+            <input type="button" value="Calcula" id="calcula">
+            <input type="text" name="resultado" id="resultado" size="20" readonly disabled>
+        </p>
+
+        <input type="date" name="" id="fecha">
+
+        <hr>
+
+        <table id="tablaHistorial">
+
+        </table>
+
+    </main>
+    
+</body>
+</html>
