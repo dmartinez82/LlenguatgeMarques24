@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tasas de Cambio del BCE (Local)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #fetchButton {
+            display: block;
+            margin: 0 auto 20px auto;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #fetchButton:hover {
+            background-color: #0056b3;
+        }
+
+        #date {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            margin: 0 auto;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tasas de Cambio del BCE (Local)</h1>
+    <button id="fetchButton">Obtener Tasas de Cambio</button>
+    <div id="date"></div>
+    <div id="tableContainer"></div>
+
+    <script>
+        document.getElementById("fetchButton").addEventListener("click", function () {
+            fetch('/xml/bce.xml')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Error al cargar el archivo XML local.");
+                    }
+                    return response.text();
+                })
+                .then(xmlString => {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(xmlString, "application/xml");
+
+                    const cubeTime = xmlDoc.querySelector("Cube > Cube[time]");
+                    if (cubeTime) {
+                        const dateText = "Fecha: " + cubeTime.getAttribute("time");
+                        document.getElementById("date").textContent = dateText;
+                    }
+
+                    const cubes = xmlDoc.querySelectorAll("Cube[currency]");
+                    let tableHTML = "<table><thead><tr><th>Moneda</th><th>Tasa</th></tr></thead><tbody>";
+
+                    cubes.forEach(cube => {
+                        const currency = cube.getAttribute("currency");
+                        const rate = cube.getAttribute("rate");
+                        tableHTML += `<tr><td>${currency}</td><td>${rate}</td></tr>`;
+                    });
+
+                    tableHTML += "</tbody></table>";
+
+                    document.getElementById("tableContainer").innerHTML = tableHTML;
+
+                    
+
+                })
+                .catch(error => {
+                    console.error('Error al procesar el XML:', error);
+                    document.getElementById("tableContainer").textContent = "Error al obtener los datos.";
+                });
+        });
+    </script>
+</body>
+
+</html>
